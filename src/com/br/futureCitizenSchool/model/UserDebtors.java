@@ -8,25 +8,24 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "grades")
-public class UserGrades {
-
+@Table(name = "Debtors")
+public class UserDebtors {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id")
 	protected int id;
 	
-	@Column(name = "grade")
-	protected String grade;
+	@Column(name = "debtors")
+	protected String debtors;
 
-	public UserGrades() {
+	public UserDebtors() {
 
 	}
 
-	public UserGrades(int id, String grade) {
+	public UserDebtors(int id, String debtors) {
 		super();
 		this.id = id;
-		this.grade = grade;
+		this.debtors = debtors;
 	}
 
 	public int getId() {
@@ -37,12 +36,13 @@ public class UserGrades {
 		this.id = id;
 	}
 
-	public String getGrade() {
-		return grade;
+	public String getDebtors() {
+		return debtors;
 	}
 
-	public void setGrade(String grade) {
-		this.grade = grade;
+	public void setDebtors(String debtors) {
+		this.debtors = debtors;
 	}
+	
 
 }

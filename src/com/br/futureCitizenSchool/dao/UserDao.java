@@ -1,9 +1,7 @@
 package com.br.futureCitizenSchool.dao;
 
 import javax.transaction.Transaction;
-
 import org.hibernate.mapping.List;
-
 import com.br.futureCitizenSchool.model.User;
 import com.br.futureCitizenSchool.utl.HibernateUtil;
 import com.mysql.cj.Session;
