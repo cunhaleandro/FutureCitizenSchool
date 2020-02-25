@@ -2,7 +2,7 @@ package br.com.futureCitizenSchool.model;
 
 public class CustomerLogin {
 	private int id;
-	private String customer;
+	private String customerName;
 	private String login;
 	private String pass;
 
@@ -10,10 +10,10 @@ public class CustomerLogin {
 
 	}
 
-	public CustomerLogin(int id, String customer, String login, String pass) {
+	public CustomerLogin(int id, String customerName, String login, String pass) {
 		super();
 		this.id = id;
-		this.customer = customer;
+		this.customerName = customerName;
 		this.login = login;
 		this.pass = pass;
 	}
@@ -26,12 +26,12 @@ public class CustomerLogin {
 		this.id = id;
 	}
 
-	public String getCustomer() {
-		return customer;
+	public String getCustomerName() {
+		return customerName;
 	}
 
-	public void setCustomer(String customer) {
-		this.customer = customer;
+	public void setCustomerName(String customerName) {
+		this.customerName = customerName;
 	}
 
 	public String getLogin() {
