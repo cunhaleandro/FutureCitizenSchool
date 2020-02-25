@@ -7,10 +7,10 @@
 </head>
 <body>
 	<center>
-		<h1>User Management</h1>
+		<h1>Students Management</h1>
 		<h2>
-			<a href="new">Add New User</a> &nbsp;&nbsp;&nbsp; <a href="list">List
-				All Users</a>
+			<a href="new">Add New Students</a> &nbsp;&nbsp;&nbsp; <a href="list">List
+				All Students</a>
 
 		</h2>
 	</center>
