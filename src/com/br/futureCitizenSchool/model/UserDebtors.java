@@ -8,15 +8,15 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "Debtors")
+@Table(name = "debtors")
 public class UserDebtors {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id")
 	protected int id;
 	
-	@Column(name = "debtors")
-	protected String debtors;
+	@Column(name = "debtor")
+	protected String debtor;
 
 	public UserDebtors() {
 
@@ -25,7 +25,7 @@ public class UserDebtors {
 	public UserDebtors(int id, String debtors) {
 		super();
 		this.id = id;
-		this.debtors = debtors;
+		this.debtor = debtor;
 	}
 
 	public int getId() {
@@ -37,11 +37,11 @@ public class UserDebtors {
 	}
 
 	public String getDebtors() {
-		return debtors;
+		return debtor;
 	}
 
 	public void setDebtors(String debtors) {
-		this.debtors = debtors;
+		this.debtor = debtors;
 	}
 	
 
