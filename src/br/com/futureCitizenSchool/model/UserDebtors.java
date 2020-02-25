@@ -1,4 +1,4 @@
-package com.br.futureCitizenSchool.model;
+package br.com.futureCitizenSchool.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

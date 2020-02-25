@@ -1,4 +1,4 @@
-package com.br.futureCitizenSchool.web;
+package br.com.futureCitizenSchool.web;
 
 
 import java.io.IOException;
@@ -13,8 +13,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.br.futureCitizenSchool.dao.UserDao;
-import com.br.futureCitizenSchool.model.User;
+import br.com.futureCitizenSchool.dao.UserDao;
+import br.com.futureCitizenSchool.model.User;
 
 @WebServlet("/")
 public class UserServelet extends HttpServlet {

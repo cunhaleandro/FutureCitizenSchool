@@ -1,13 +1,12 @@
-package com.br.futureCitizenSchool.dao;
+package br.com.futureCitizenSchool.dao;
 
 
 import java.util.List;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
-
-import com.br.futureCitizenSchool.model.User;
-import com.br.futureCitizenSchool.utl.HibernateUtil;
+import br.com.futureCitizenSchool.model.User;
+import br.com.futureCitizenSchool.utl.HibernateUtil;
 
 
 public class UserDao {

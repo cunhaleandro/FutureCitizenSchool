@@ -1,4 +1,4 @@
-package com.br.futureCitizenSchool.utl;
+package br.com.futureCitizenSchool.utl;
 
 import java.util.Properties;
 
@@ -8,7 +8,7 @@ import org.hibernate.cfg.Configuration;
 import org.hibernate.cfg.Environment;
 import org.hibernate.service.ServiceRegistry;
 
-import com.br.futureCitizenSchool.model.User;
+import br.com.futureCitizenSchool.model.User;
 
 public class HibernateUtil {
 	private static SessionFactory sessionFactory;
@@ -26,7 +26,7 @@ public class HibernateUtil {
 				settings.put(Environment.DIALECT, "org.hibernate.dialect.MySQL5Dialect");
 				settings.put(Environment.SHOW_SQL, "true");
 				settings.put(Environment.CURRENT_SESSION_CONTEXT_CLASS, "thread");
-				settings.put(Environment.HBM2DDL_AUTO, "create-drop");
+				settings.put(Environment.HBM2DDL_AUTO, "update");
 
 				configuration.setProperties(settings);
 				configuration.addAnnotatedClass(User.class);
