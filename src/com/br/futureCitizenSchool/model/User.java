@@ -1,5 +1,7 @@
 package com.br.futureCitizenSchool.model;
 
+
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -9,6 +11,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "students")
+
 public class User {
 
 	@Id
@@ -47,20 +50,8 @@ public class User {
 
 	}
 
-	public User(int id, String stundent, String cpf, String rg, String birthday, String registrionDate,
-			String motherName) {
-		super();
-		this.id = id;
-		this.stundent = stundent;
-		this.cpf = cpf;
-		this.rg = rg;
-		this.birthday = birthday;
-		this.registrionDate = registrionDate;
-		this.motherName = motherName;
-	}
-
-	public User(int id, String stundent, String cpf, String rg, String birthday, String registrionDate,
-			String motherName, String fatherName, String parentEmail, String parentPhone) {
+	public User(int id, String stundent, String cpf, String rg, String birthday, String registrionDate, String motherName,
+			String fatherName, String parentEmail, String parentPhone) {
 		super();
 		this.id = id;
 		this.stundent = stundent;

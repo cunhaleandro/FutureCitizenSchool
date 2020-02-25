@@ -1,10 +1,14 @@
 package com.br.futureCitizenSchool.dao;
 
-import javax.transaction.Transaction;
-import org.hibernate.mapping.List;
+
+import java.util.List;
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+
+
 import com.br.futureCitizenSchool.model.User;
 import com.br.futureCitizenSchool.utl.HibernateUtil;
-import com.mysql.cj.Session;
+
 
 public class UserDao {
 
@@ -47,11 +51,7 @@ public class UserDao {
 		}
 	}
 
-	/**
-	 * Delete User
-	 * 
-	 * @param id
-	 */
+	
 	public void deleteUser(int id) {
 
 		Transaction transaction = null;
@@ -76,12 +76,7 @@ public class UserDao {
 		}
 	}
 
-	/**
-	 * Get User By ID
-	 * 
-	 * @param id
-	 * @return
-	 */
+	
 	public User getUser(int id) {
 
 		Transaction transaction = null;
@@ -102,16 +97,12 @@ public class UserDao {
 		return user;
 	}
 
-	/**
-	 * Get all Users
-	 * 
-	 * @return
-	 */
+	
 	@SuppressWarnings("unchecked")
-	public List<User> getAllUser() {
+	public static List <User> getAllUser() {
 
 		Transaction transaction = null;
-		List<User> listOfUser = null;
+		List <User> listOfUser = null;
 		try (Session session = HibernateUtil.getSessionFactory().openSession()) {
 			// start a transaction
 			transaction = session.beginTransaction();

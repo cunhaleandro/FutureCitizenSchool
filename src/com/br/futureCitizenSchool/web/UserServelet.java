@@ -1,7 +1,9 @@
 package com.br.futureCitizenSchool.web;
 
+
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.Date;
 import java.util.List;
 
 import javax.servlet.RequestDispatcher;
@@ -94,8 +96,7 @@ public class UserServelet extends HttpServlet {
 		String parentPhone = request.getParameter("parentPhone");
 		String parentEmail = request.getParameter("parentEmail");
 
-		User newUser = new User(id, student, cpf, rg, birthday, registrionDate, motherName, fatherName, parentPhone,
-				parentEmail);
+		User newUser = new User(id, student, cpf, rg, birthday, registrionDate, motherName, fatherName, parentPhone, parentEmail);
 		userDao.saveUser(newUser);
 		response.sendRedirect("list");
 	}
@@ -112,8 +113,7 @@ public class UserServelet extends HttpServlet {
 		String parentPhone = request.getParameter("parentPhone");
 		String parentEmail = request.getParameter("parentEmail");
 
-		User user = new User(id, student, cpf, rg, birthday, registrionDate, motherName, fatherName, parentPhone,
-				parentEmail);
+		User user = new User(id, student, cpf, rg, birthday, registrionDate, motherName, fatherName, parentPhone,parentEmail);
 		userDao.updateUser(user);
 		response.sendRedirect("list");
 	}
