@@ -23,7 +23,7 @@ public class CustomerDao {
     }
  
  
-    public CustomerLogin getUsuario( String login, String pass ){
+    public CustomerLogin getLogin ( String login, String pass ){
         Connection c = this.getConnection();
         PreparedStatement ps = null;
         ResultSet rs = null;

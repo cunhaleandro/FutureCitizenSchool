@@ -20,7 +20,7 @@ public class HibernateUtil {
 
 				Properties settings = new Properties();
 				settings.put(Environment.DRIVER, "com.mysql.cj.jdbc.Driver");
-				settings.put(Environment.URL, "jdbc:mysql://localhost:3306/futureCitizenSchool?useSSL=false");
+				settings.put(Environment.URL, "jdbc:mysql://localhost:3306/futureCitizenSchool?useTimezone=true&serverTimezone=America/Sao_Paulo");
 				settings.put(Environment.USER, "root");
 				settings.put(Environment.PASS, "recode12");
 				settings.put(Environment.DIALECT, "org.hibernate.dialect.MySQL5Dialect");
