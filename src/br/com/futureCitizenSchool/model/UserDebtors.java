@@ -17,6 +17,9 @@ public class UserDebtors {
 	
 	@Column(name = "debtor")
 	protected String debtor;
+	
+	@Column(name = "debt")
+	protected Double debt;
 
 	public UserDebtors() {
 
