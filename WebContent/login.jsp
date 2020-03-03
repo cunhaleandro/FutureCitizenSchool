@@ -7,23 +7,23 @@
 <title>Login</title>
 </head>
 <body>
- 
+ <center>
 <form method="post" action="LoginValidate.do">
 <table>
     <tr>
         <td>User</td>
-        <td><input type="text" name="customerName" /></td>
+        <td><input type="text" name="login" /></td>
     </tr>
     <tr>
         <td>Pass</td>
-        <td><input type="password" name="pass" /></td>
+        <td><input type="password" name="password" /></td>
     </tr>
     <tr>
-        <td><input type="submit" value="Login" /></td>
+        <td><input type="submit" value="submit" /></td>
     </tr>
 </table>
  
 </form>
- 
+ </center>
 </body>
 </html>

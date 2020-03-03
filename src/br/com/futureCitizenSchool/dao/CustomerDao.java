@@ -6,7 +6,11 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import br.com.futureCitizenSchool.model.CustomerLogin;
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+
+import br.com.futureCitizenSchool.model.Customer;
+import br.com.futureCitizenSchool.utl.HibernateUtil;
 
 public class CustomerDao {
 	public Connection getConnection(){
@@ -23,7 +27,7 @@ public class CustomerDao {
     }
  
  
-    public CustomerLogin getLogin ( String login, String pass ){
+    public Customer getLogin ( String login, String pass ){
         Connection c = this.getConnection();
         PreparedStatement ps = null;
         ResultSet rs = null;
@@ -35,7 +39,7 @@ public class CustomerDao {
             rs = ps.executeQuery();
  
             if ( rs.next() ){
-                CustomerLogin user = new CustomerLogin();
+                Customer user = new Customer();
                 user.setId( rs.getInt("id") );
                 user.setLogin(login);
                 user.setPass(pass);
@@ -63,4 +67,30 @@ public class CustomerDao {
         }
         return null;
     }
+    
+	public Customer getCustomer(String login, String pass) {
+
+		Transaction transaction = null;
+		Customer customer = null;
+		try (Session session = HibernateUtil.getSessionFactory().openSession()) {
+			// start a transaction
+			transaction = session.beginTransaction();
+			// get an user object
+			customer = session.get(Customer.class, login);
+			// customer terá um objeto customer que foi puxado do banco
+			// se customer for null é pq n achou no banco
+			// pega o password de customer usando customer.getPass()
+			// compara o pass com o password de customer, se forem iguais o usuário
+			// existe e digitou a senha certa, entao retorna ele
+			// se não retorna null
+			// commit transaction
+			transaction.commit();
+		} catch (Exception e) {
+			if (transaction != null) {
+				transaction.rollback();
+			}
+			e.printStackTrace();
+		}
+		return customer;
+	}
 }

@@ -25,8 +25,7 @@ public class UserDebtors {
 
 	}
 
-	public UserDebtors(int id, String debtors) {
-		super();
+	public UserDebtors(int id, String debtor) {
 		this.id = id;
 		this.debtor = debtor;
 	}
@@ -43,8 +42,8 @@ public class UserDebtors {
 		return debtor;
 	}
 
-	public void setDebtors(String debtors) {
-		this.debtor = debtors;
+	public void setDebtors(String debtor) {
+		this.debtor = debtor;
 	}
 	
 

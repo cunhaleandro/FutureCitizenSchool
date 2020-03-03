@@ -1,0 +1,1 @@
+insert into customer values(1,"Leandro Cunha","cunhaleandro", "cordel426"),(2,"Rejane Almeida","almeidarejane", "bela3210"),(3,"Alexsandra Almeida","almeidaale","bela"),(4,"Michele Lima","limamichele","mercia");

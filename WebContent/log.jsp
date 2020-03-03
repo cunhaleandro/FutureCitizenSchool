@@ -10,11 +10,11 @@
 <body>
  
 <c:choose>
-    <c:when test="${ user eq null }">
-        <jsp:forward page="erroLogin.jsp" />
+    <c:when test="${ customer eq null }">
+        <jsp:forward page="error.jsp" />
     </c:when>
     <c:otherwise>
-        <p>Bem-vindo ${ user.nome }</p>
+        <p>Bem-vindo ${ customer.nome }</p>
     </c:otherwise>
  
 </c:choose>

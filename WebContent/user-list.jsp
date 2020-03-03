@@ -33,19 +33,19 @@
 			</tr>
 			<c:forEach var="user" items="${listUser}">
 				<tr>
-					<td><c:out value="${user.id}" /></td>
-					<td><c:out value="${user.student}" /></td>
-					<td><c:out value="${user.cpf}" /></td>
-					<td><c:out value="${user.rg}" /></td>
-					<td><c:out value="${user.birthday}" /></td>
-					<td><c:out value="${user.registrionDate}" /></td>
-					<td><c:out value="${user.motherName}" /></td>
-					<td><c:out value="${user.fatherName}" /></td>
-					<td><c:out value="${user.parentPhone}" /></td>
-					<td><c:out value="${user.parentEmail}" /></td>
-					<td><a href="edit?id=<c:out value='${user.id}' />">Edit</a>
+					<td><c:out value="${User.id}" /></td>
+					<td><c:out value="${User.student}" /></td>
+					<td><c:out value="${User.cpf}" /></td>
+					<td><c:out value="${User.rg}" /></td>
+					<td><c:out value="${User.birthday}" /></td>
+					<td><c:out value="${User.registrionDate}" /></td>
+					<td><c:out value="${User.motherName}" /></td>
+					<td><c:out value="${User.fatherName}" /></td>
+					<td><c:out value="${User.parentPhone}" /></td>
+					<td><c:out value="${User.parentEmail}" /></td>
+					<td><a href="edit?id=<c:out value='${User.id}' />">Edit</a>
 						&nbsp;&nbsp;&nbsp;&nbsp; <a
-						href="delete?id=<c:out value='${user.id}' />">Delete</a></td>
+						href="delete?id=<c:out value='${User.id}' />">Delete</a></td>
 				</tr>
 			</c:forEach>
 		</table>

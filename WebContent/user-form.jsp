@@ -10,9 +10,9 @@
 		<h1>Students Management</h1>
 		<h2>
 			<a href="new">Add New Students</a> &nbsp;&nbsp;&nbsp; <a href="list">List
-				All Students</a>
-
+				All Students </a>
 		</h2>
+
 	</center>
 	<div align="center">
 		<c:if test="${user != null}">
