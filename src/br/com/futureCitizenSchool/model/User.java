@@ -20,7 +20,7 @@ public class User {
 	protected int id;
 
 	@Column(name = "student")
-	protected String stundent;
+	protected String student;
 
 	@Column(name = "cpf")
 	protected String cpf;
@@ -50,11 +50,11 @@ public class User {
 
 	}
 
-	public User(int id, String stundent, String cpf, String rg, String birthday, String registrionDate, String motherName,
+	public User(int id, String student, String cpf, String rg, String birthday, String registrionDate, String motherName,
 			String fatherName, String parentEmail, String parentPhone) {
 		super();
 		this.id = id;
-		this.stundent = stundent;
+		this.student = student;
 		this.cpf = cpf;
 		this.rg = rg;
 		this.birthday = birthday;
@@ -74,11 +74,11 @@ public class User {
 	}
 
 	public String getStundent() {
-		return stundent;
+		return student;
 	}
 
 	public void setStundent(String stundent) {
-		this.stundent = stundent;
+		this.student = stundent;
 	}
 
 	public String getCpf() {
