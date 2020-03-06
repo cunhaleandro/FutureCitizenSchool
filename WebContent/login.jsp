@@ -8,7 +8,7 @@
 </head>
 <body>
  <center>
-<form method="post" action="LoginValidate.do">
+<form method="post" action="CustomerServlet.do">
 <table>
     <tr>
         <td>User</td>
@@ -16,7 +16,7 @@
     </tr>
     <tr>
         <td>Pass</td>
-        <td><input type="password" name="password" /></td>
+        <td><input type="password" name="pass" /></td>
     </tr>
     <tr>
         <td><input type="submit" value="submit" /></td>

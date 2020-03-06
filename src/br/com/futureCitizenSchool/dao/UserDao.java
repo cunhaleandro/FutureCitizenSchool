@@ -28,11 +28,6 @@ public class UserDao {
 		}
 	}
 
-	/**
-	 * Update User
-	 * 
-	 * @param user
-	 */
 	public void updateUser(User user) {
 		Transaction transaction = null;
 		try (Session session = HibernateUtil.getSessionFactory().openSession()) {
