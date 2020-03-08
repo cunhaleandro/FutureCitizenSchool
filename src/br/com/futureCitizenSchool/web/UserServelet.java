@@ -64,7 +64,7 @@ public class UserServelet extends HttpServlet {
 	private void listUser(HttpServletRequest request, HttpServletResponse response)
 			throws SQLException, IOException, ServletException {
 		List<User> listUser = UserDao.getAllUser();
-		request.setAttribute("listOfUser", listUser);
+		request.setAttribute("listUser", listUser);
 		RequestDispatcher dispatcher = request.getRequestDispatcher("user-list.jsp");
 		dispatcher.forward(request, response);
 	}
@@ -100,7 +100,7 @@ public class UserServelet extends HttpServlet {
 		User newUser = new User(aName, bCpf, cRg, dBirthday, eRegistrionDate, fMotherName, gFatherName, hParentPhone,
 				iParentEmail);
 		userDao.saveUser(newUser);
-		response.sendRedirect("listOfUser");
+		response.sendRedirect("listUser");
 
 	}
 
@@ -119,13 +119,13 @@ public class UserServelet extends HttpServlet {
 		User user = new User(id, aName, bCpf, cRg, dBirthday, eRegistrionDate, fMotherName, gFatherName, hParentPhone,
 				iParentEmail);
 		userDao.updateUser(user);
-		response.sendRedirect("listOfUser");
+		response.sendRedirect("listUser");
 	}
 
 	private void deleteUser(HttpServletRequest request, HttpServletResponse response) throws SQLException, IOException {
 		int id = Integer.parseInt(request.getParameter("id"));
 		userDao.deleteUser(id);
-		response.sendRedirect("listOfUser");
+		response.sendRedirect("listUser");
 	}
 
 }
