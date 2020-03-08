@@ -14,7 +14,7 @@
         <jsp:forward page="error.jsp" />
     </c:when>
     <c:otherwise>
-        <p>Bem-vindo ${ customer.nome }</p>
+        <p>Bem-vindo ${ customer.customerName }</p>
     </c:otherwise>
  
 </c:choose>

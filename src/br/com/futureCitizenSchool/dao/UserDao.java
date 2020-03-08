@@ -15,6 +15,7 @@ public class UserDao {
 			transaction = session.beginTransaction();
 			session.save(user);
 			transaction.commit();
+			
 		} catch (Exception e) {
 			if (transaction != null) {
 				transaction.rollback();
@@ -85,6 +86,7 @@ public class UserDao {
 			transaction = session.beginTransaction();
 			listOfUser = session.createQuery("from User").getResultList();
 			transaction.commit();
+			listOfUser = session.createQuery("from User").getResultList();
 		} catch (Exception e) {
 			if (transaction != null) {
 				transaction.rollback();
