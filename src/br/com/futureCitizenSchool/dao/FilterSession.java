@@ -35,7 +35,7 @@ public class FilterSession {
 		HttpServletRequest httpRequest = (HttpServletRequest) request;
 
 		try {
-			if (httpRequest.isRequestedSessionIdValid()) { // aqui você valida a sessão
+			if (httpRequest.isRequestedSessionIdValid()) { 
 				chain.doFilter(request, response);
 			} else {
 				HttpServletResponse httpResponse = (HttpServletResponse) response;
