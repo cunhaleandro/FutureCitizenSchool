@@ -9,8 +9,8 @@
 	<center>
 		<h1>Students Management</h1>
 		<h2>
-			<a href="new">Add New Students</a> &nbsp;&nbsp;&nbsp; <a href="list">List
-				All Students </a>
+			<a href="new">Add New user</a> &nbsp;&nbsp;&nbsp; <a href="list">List
+				All user </a>
 		</h2>
 
 	</center>
@@ -36,49 +36,49 @@
 				<input type="hidden" name="id" value="<c:out value='${user.id}' />" />
 			</c:if>
 			<tr>
-				<th>Student:</th>
-				<td><input type="text" name="student" size="100"
-					value="<c:out value='${user.student}' />" /></td>
+				<th>Name:</th>
+				<td><input type="text" name="name" size="100"
+					value="<c:out value='${user.aName}' />" /></td>
 			</tr>
 			<tr>
 				<th>CPF:</th>
 				<td><input type="text" name="cpf" size="11"
-					value="<c:out value='${user.cpf}' />" /></td>
+					value="<c:out value='${user.bCpf}' />" /></td>
 			</tr>
 			<tr>
 				<th>RG:</th>
 				<td><input type="text" name="rg" size="20"
-					value="<c:out value='${user.rg}' />" /></td>
+					value="<c:out value='${user.cRg}' />" /></td>
 			</tr>
 			<tr>
 				<th>Student Birthday:</th>
 				<td><input type="text" name="birthday" size="10"
-					value="<c:out value='${user.birthday}' />" /></td>
+					value="<c:out value='${user.dBirthday}' />" /></td>
 			</tr>
 			<tr>
 				<th>Student Register Date:</th>
 				<td><input type="text" name="registrionDate" size="10"
-					value="<c:out value='${user.registrionDate}' />" /></td>
+					value="<c:out value='${user.eRegistrionDate}' />" /></td>
 			</tr>
 			<tr>
 				<th>Mother Name:</th>
 				<td><input type="text" name="motherName" size="100"
-					value="<c:out value='${user.motherName}' />" /></td>
+					value="<c:out value='${user.fMotherName}' />" /></td>
 			</tr>
 			<tr>
 				<th>Father Name:</th>
 				<td><input type="text" name="fatherName" size="100"
-					value="<c:out value='${user.fatherName}' />" /></td>
+					value="<c:out value='${user.gFatherName}' />" /></td>
 			</tr>
 			<tr>
 				<th>Parents Phone:</th>
 				<td><input type="text" name="parentPhone" size="100"
-					value="<c:out value='${user.parentPhone}' />" /></td>
+					value="<c:out value='${user.hParentPhone}' />" /></td>
 			</tr>
 			<tr>
 				<th>Parents E-mail:</th>
 				<td><input type="text" name="parentEmail" size="100"
-					value="<c:out value='${user.parentEmail}' />" /></td>
+					value="<c:out value='${user.iParentEmail}' />" /></td>
 			</tr>
 			<tr>
 				<td colspan="2" align="center"><input type="submit"

@@ -1,7 +1,5 @@
 package br.com.futureCitizenSchool.model;
 
-
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -19,50 +17,64 @@ public class User {
 	@Column(name = "id")
 	protected int id;
 
-	@Column(name = "student")
-	protected String student;
+	@Column(name = "aName")
+	protected String aName;
 
-	@Column(name = "cpf")
-	protected String cpf;
+	@Column(name = "bCpf")
+	protected String bCpf;
 
-	@Column(name = "rg")
-	protected String rg;
+	@Column(name = "cRg")
+	protected String cRg;
 
-	@Column(name = "birthday")
-	protected String birthday;
+	@Column(name = "dBirthday")
+	protected String dBirthday;
 
-	@Column(name = "registrionDate")
-	protected String registrionDate;
+	@Column(name = "eRegistrionDate")
+	protected String eRegistrionDate;
 
-	@Column(name = "motherName")
-	protected String motherName;
+	@Column(name = "fMotherName")
+	protected String fMotherName;
 
-	@Column(name = "fatherName")
-	protected String fatherName;
+	@Column(name = "gFatherName")
+	protected String gFatherName;
 
-	@Column(name = "parentPhone")
-	protected String parentPhone;
+	@Column(name = "hParentPhone")
+	protected String hParentPhone;
 
-	@Column(name = "parentEmail")
-	protected String parentEmail;
+	@Column(name = "iParentEmail")
+	protected String iParentEmail;
 
 	public User() {
 
 	}
 
-	public User(int id, String student, String cpf, String rg, String birthday, String registrionDate, String motherName,
-			String fatherName, String parentEmail, String parentPhone) {
+	public User(String aName, String bCpf, String cRg, String dBirthday, String eRegistrionDate, String fMotherName,
+			String gFatherName, String hParentPhone, String iParentEmail) {
+		super();
+		this.aName = aName;
+		this.bCpf = bCpf;
+		this.cRg = cRg;
+		this.dBirthday = dBirthday;
+		this.eRegistrionDate = eRegistrionDate;
+		this.fMotherName = fMotherName;
+		this.gFatherName = gFatherName;
+		this.hParentPhone = hParentPhone;
+		this.iParentEmail = iParentEmail;
+	}
+
+	public User(int id, String aName, String bCpf, String cRg, String dBirthday, String eRegistrionDate,
+			String fMotherName, String gFatherName, String hParentPhone, String iParentEmail) {
 		super();
 		this.id = id;
-		this.student = student;
-		this.cpf = cpf;
-		this.rg = rg;
-		this.birthday = birthday;
-		this.registrionDate = registrionDate;
-		this.motherName = motherName;
-		this.fatherName = fatherName;
-		this.parentEmail = parentEmail;
-		this.parentPhone = parentPhone;
+		this.aName = aName;
+		this.bCpf = bCpf;
+		this.cRg = cRg;
+		this.dBirthday = dBirthday;
+		this.eRegistrionDate = eRegistrionDate;
+		this.fMotherName = fMotherName;
+		this.gFatherName = gFatherName;
+		this.hParentPhone = hParentPhone;
+		this.iParentEmail = iParentEmail;
 	}
 
 	public int getId() {
@@ -73,76 +85,77 @@ public class User {
 		this.id = id;
 	}
 
-	public String getStundent() {
-		return student;
+	public String getaName() {
+		return aName;
 	}
 
-	public void setStundent(String stundent) {
-		this.student = stundent;
+	public void setaName(String aName) {
+		this.aName = aName;
 	}
 
-	public String getCpf() {
-		return cpf;
+	public String getbCpf() {
+		return bCpf;
 	}
 
-	public void setCpf(String cpf) {
-		this.cpf = cpf;
+	public void setbCpf(String bCpf) {
+		this.bCpf = bCpf;
 	}
 
-	public String getRg() {
-		return rg;
+	public String getcRg() {
+		return cRg;
 	}
 
-	public void setRg(String rg) {
-		this.rg = rg;
+	public void setcRg(String cRg) {
+		this.cRg = cRg;
 	}
 
-	public String getBirthday() {
-		return birthday;
+	public String getdBirthday() {
+		return dBirthday;
 	}
 
-	public void setBirthday(String birthday) {
-		this.birthday = birthday;
+	public void setdBirthday(String dBirthday) {
+		this.dBirthday = dBirthday;
 	}
 
-	public String getRegistrionDate() {
-		return registrionDate;
+	public String geteRegistrionDate() {
+		return eRegistrionDate;
 	}
 
-	public void setRegistrionDate(String registrionDate) {
-		this.registrionDate = registrionDate;
+	public void seteRegistrionDate(String eRegistrionDate) {
+		this.eRegistrionDate = eRegistrionDate;
 	}
 
-	public String getMotherName() {
-		return motherName;
+	public String getfMotherName() {
+		return fMotherName;
 	}
 
-	public void setMotherName(String motherName) {
-		this.motherName = motherName;
+	public void setfMotherName(String fMotherName) {
+		this.fMotherName = fMotherName;
 	}
 
-	public String getFatherName() {
-		return fatherName;
+	public String getgFatherName() {
+		return gFatherName;
 	}
 
-	public void setFatherName(String fatherName) {
-		this.fatherName = fatherName;
+	public void setgFatherName(String gFatherName) {
+		this.gFatherName = gFatherName;
 	}
 
-	public String getParentEmail() {
-		return parentEmail;
+	public String gethParentPhone() {
+		return hParentPhone;
 	}
 
-	public void setParentEmail(String parentEmail) {
-		this.parentEmail = parentEmail;
+	public void sethParentPhone(String hParentPhone) {
+		this.hParentPhone = hParentPhone;
 	}
 
-	public String getParentPhone() {
-		return parentPhone;
+	public String getiParentEmail() {
+		return iParentEmail;
 	}
 
-	public void setParentPhone(String parentPhone) {
-		this.parentPhone = parentPhone;
+	public void setiParentEmail(String iParentEmail) {
+		this.iParentEmail = iParentEmail;
 	}
+	
 
 }

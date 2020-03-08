@@ -1,6 +1,5 @@
 package br.com.futureCitizenSchool.web;
 
-
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.List;
@@ -50,6 +49,9 @@ public class UserServelet extends HttpServlet {
 			case "/update":
 				updateUser(request, response);
 				break;
+			case "/list":
+				listUser(request, response);
+				break;
 			default:
 				listUser(request, response);
 				break;
@@ -61,8 +63,8 @@ public class UserServelet extends HttpServlet {
 
 	private void listUser(HttpServletRequest request, HttpServletResponse response)
 			throws SQLException, IOException, ServletException {
-		List <User> listUser = UserDao.getAllUser();
-		request.setAttribute("listUser", listUser);
+		List<User> listOfUser = UserDao.getAllUser();
+		request.setAttribute("listUser", listOfUser);
 		RequestDispatcher dispatcher = request.getRequestDispatcher("user-list.jsp");
 		dispatcher.forward(request, response);
 	}
@@ -84,43 +86,46 @@ public class UserServelet extends HttpServlet {
 	}
 
 	private void insertUser(HttpServletRequest request, HttpServletResponse response) throws SQLException, IOException {
-		int id = Integer.parseInt(request.getParameter("id"));
-		String student = request.getParameter("student");
-		String cpf = request.getParameter("cpf");
-		String rg = request.getParameter("rg");
-		String birthday = request.getParameter("birthday");
-		String registrionDate = request.getParameter("registrionDate");
-		String motherName = request.getParameter("motherName");
-		String fatherName = request.getParameter("fatherName");
-		String parentPhone = request.getParameter("parentPhone");
-		String parentEmail = request.getParameter("parentEmail");
 
-		User newUser = new User(id, student, cpf, rg, birthday, registrionDate, motherName, fatherName, parentPhone, parentEmail);
+		String aName = request.getParameter("aName");
+		String bCpf = request.getParameter("bCpf");
+		String cRg = request.getParameter("cRg");
+		String dBirthday = request.getParameter("dBirthday");
+		String eRegistrionDate = request.getParameter("eRegistrionDate");
+		String fMotherName = request.getParameter("fMotherName");
+		String gFatherName = request.getParameter("gFatherName");
+		String hParentPhone = request.getParameter("hParentPhone");
+		String iParentEmail = request.getParameter("iParentEmail");
+
+		User newUser = new User(aName, bCpf, cRg, dBirthday, eRegistrionDate, fMotherName, gFatherName, hParentPhone,
+				iParentEmail);
 		userDao.saveUser(newUser);
-		response.sendRedirect("list");
+		response.sendRedirect("listOfUser");
+
 	}
 
 	private void updateUser(HttpServletRequest request, HttpServletResponse response) throws SQLException, IOException {
 		int id = Integer.parseInt(request.getParameter("id"));
-		String student = request.getParameter("student");
-		String cpf = request.getParameter("cpf");
-		String rg = request.getParameter("rg");
-		String birthday = request.getParameter("birthday");
-		String registrionDate = request.getParameter("registrionDate");
-		String motherName = request.getParameter("motherName");
-		String fatherName = request.getParameter("fatherName");
-		String parentPhone = request.getParameter("parentPhone");
-		String parentEmail = request.getParameter("parentEmail");
+		String aName = request.getParameter("aName");
+		String bCpf = request.getParameter("bCpf");
+		String cRg = request.getParameter("cRg");
+		String dBirthday = request.getParameter("dBirthday");
+		String eRegistrionDate = request.getParameter("eRegistrionDate");
+		String fMotherName = request.getParameter("fMotherName");
+		String gFatherName = request.getParameter("gFatherName");
+		String hParentPhone = request.getParameter("hParentPhone");
+		String iParentEmail = request.getParameter("iParentEmail");
 
-		User user = new User(id, student, cpf, rg, birthday, registrionDate, motherName, fatherName, parentPhone,parentEmail);
+		User user = new User(id, aName, bCpf, cRg, dBirthday, eRegistrionDate, fMotherName, gFatherName, hParentPhone,
+				iParentEmail);
 		userDao.updateUser(user);
-		response.sendRedirect("list");
+		response.sendRedirect("listOfUser");
 	}
 
 	private void deleteUser(HttpServletRequest request, HttpServletResponse response) throws SQLException, IOException {
 		int id = Integer.parseInt(request.getParameter("id"));
 		userDao.deleteUser(id);
-		response.sendRedirect("list");
+		response.sendRedirect("listOfUser");
 	}
 
 }

@@ -1,0 +1,66 @@
+From d19b5785cfa41cfdb89455bc164d4f0a2e8a069c Mon Sep 17 00:00:00 2001
+From: Leandro Cunha <leandro.jrc@hotmail.com>
+Date: Fri, 6 Mar 2020 16:42:59 -0300
+Subject: [PATCH] =?UTF-8?q?Tentativa=20de=20intera=C3=A7=C3=A3o=20com=20o?=
+ =?UTF-8?q?=20banco.?=
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+---
+ WebContent/WEB-INF/classes/META-INF/import.sql  | 3 ++-
+ WebContent/login.jsp                            | 4 ++--
+ src/br/com/futureCitizenSchool/dao/UserDao.java | 5 -----
+ 3 files changed, 4 insertions(+), 8 deletions(-)
+
+diff --git a/WebContent/WEB-INF/classes/META-INF/import.sql b/WebContent/WEB-INF/classes/META-INF/import.sql
+index be01eb5..7f10d9b 100644
+--- a/WebContent/WEB-INF/classes/META-INF/import.sql
++++ b/WebContent/WEB-INF/classes/META-INF/import.sql
+@@ -1 +1,2 @@
+-insert into customer values(1,"Leandro Cunha","cunhaleandro", "cordel426"),(2,"Rejane Almeida","almeidarejane", "bela3210"),(3,"Alexsandra Almeida","almeidaale","bela"),(4,"Michele Lima","limamichele","mercia");
+\ No newline at end of file
++insert into customer values(1,"Leandro Cunha","cunhaleandro", "cordel426"),(2,"Rejane Almeida","almeidarejane", "bela3210"),(3,"Alexsandra Almeida","almeidaale","bela"),(4,"Michele Lima","limamichele","mercia");
++INSERT INTO student VALUES(1,"Heitor Lima","01506508413","7602565","05/10/2014","22/01/2020","Caroline Lima","Leandro Cunha","(81)98583-2546/(81)98405-3381","leandro.jrc@hotmail.com/caroline-call@hotmail.com"),(2,"Maria Heloísa","02702803366","8984767","08/01/2013","22/01/2020","Alexsandra Almeida","Silvio Dias","(81)98883-3210","alexsandra_almeida@hotmail.com/silvio_dias@hotmail.com"),(3,"João Henrrique","04812385499","7603789","20/05/2011","22/01/2020","Alexsandra Almeida","Silvio Dias","(81)98883-3210","alexsandra_almeida@hotmail.com/silvio_dias@hotmail.com");
+\ No newline at end of file
+diff --git a/WebContent/login.jsp b/WebContent/login.jsp
+index fbbc5d0..f5bb9d0 100644
+--- a/WebContent/login.jsp
++++ b/WebContent/login.jsp
+@@ -8,7 +8,7 @@
+ </head>
+ <body>
+  <center>
+-<form method="post" action="LoginValidate.do">
++<form method="post" action="CustomerServlet.do">
+ <table>
+     <tr>
+         <td>User</td>
+@@ -16,7 +16,7 @@
+     </tr>
+     <tr>
+         <td>Pass</td>
+-        <td><input type="password" name="password" /></td>
++        <td><input type="password" name="pass" /></td>
+     </tr>
+     <tr>
+         <td><input type="submit" value="submit" /></td>
+diff --git a/src/br/com/futureCitizenSchool/dao/UserDao.java b/src/br/com/futureCitizenSchool/dao/UserDao.java
+index bd6ec6d..9f791dd 100644
+--- a/src/br/com/futureCitizenSchool/dao/UserDao.java
++++ b/src/br/com/futureCitizenSchool/dao/UserDao.java
+@@ -28,11 +28,6 @@ public class UserDao {
+ 		}
+ 	}
+ 
+-	/**
+-	 * Update User
+-	 * 
+-	 * @param user
+-	 */
+ 	public void updateUser(User user) {
+ 		Transaction transaction = null;
+ 		try (Session session = HibernateUtil.getSessionFactory().openSession()) {
+-- 
+2.25.0.windows.1
+

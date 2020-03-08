@@ -73,17 +73,8 @@ public class CustomerDao {
 		Transaction transaction = null;
 		Customer customer = null;
 		try (Session session = HibernateUtil.getSessionFactory().openSession()) {
-			// start a transaction
 			transaction = session.beginTransaction();
-			// get an user object
 			customer = session.get(Customer.class, login);
-			// customer terá um objeto customer que foi puxado do banco
-			// se customer for null é pq n achou no banco
-			// pega o password de customer usando customer.getPass()
-			// compara o pass com o password de customer, se forem iguais o usuário
-			// existe e digitou a senha certa, entao retorna ele
-			// se não retorna null
-			// commit transaction
 			transaction.commit();
 		} catch (Exception e) {
 			if (transaction != null) {

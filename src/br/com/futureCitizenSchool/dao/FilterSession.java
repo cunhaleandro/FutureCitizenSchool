@@ -39,11 +39,7 @@ public class FilterSession {
 				chain.doFilter(request, response);
 			} else {
 				HttpServletResponse httpResponse = (HttpServletResponse) response;
-				httpResponse.sendRedirect(httpRequest.getContextPath() + "/erro/sessaoexpirada.jsp");/*e aqui você
-																										// pode chamar a
-																										// página de
-																										// login se
-																										// quiser*/
+				httpResponse.sendRedirect(httpRequest.getContextPath() + "/erro/sessaoexpirada.jsp");
 			}
 		} catch (Exception e) {
 			HttpServletResponse httpResponse = (HttpServletResponse) response;

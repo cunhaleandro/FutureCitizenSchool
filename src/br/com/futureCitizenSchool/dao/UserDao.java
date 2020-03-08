@@ -1,13 +1,11 @@
 package br.com.futureCitizenSchool.dao;
 
-
 import java.util.List;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
 import br.com.futureCitizenSchool.model.User;
 import br.com.futureCitizenSchool.utl.HibernateUtil;
-
 
 public class UserDao {
 
@@ -45,7 +43,6 @@ public class UserDao {
 		}
 	}
 
-	
 	public void deleteUser(int id) {
 
 		Transaction transaction = null;
@@ -70,18 +67,15 @@ public class UserDao {
 		}
 	}
 
-	
 	public User getUser(int id) {
 
 		Transaction transaction = null;
 		User user = null;
 		try (Session session = HibernateUtil.getSessionFactory().openSession()) {
-			// start a transaction
 			transaction = session.beginTransaction();
-			// get an user object
 			user = session.get(User.class, id);
-			// commit transaction
 			transaction.commit();
+
 		} catch (Exception e) {
 			if (transaction != null) {
 				transaction.rollback();
@@ -91,12 +85,11 @@ public class UserDao {
 		return user;
 	}
 
-	
 	@SuppressWarnings("unchecked")
-	public static List <User> getAllUser() {
+	public static List<User> getAllUser() {
 
 		Transaction transaction = null;
-		List <User> listOfUser = null;
+		List<User> listOfUser = null;
 		try (Session session = HibernateUtil.getSessionFactory().openSession()) {
 			// start a transaction
 			transaction = session.beginTransaction();
