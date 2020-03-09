@@ -37,47 +37,47 @@
 			</c:if>
 			<tr>
 				<th>Name:</th>
-				<td><input type="text" name="name" size="100"
+				<td><input type="text" name="aName" size="100"
 					value="<c:out value='${user.aName}' />" /></td>
 			</tr>
 			<tr>
 				<th>CPF:</th>
-				<td><input type="text" name="cpf" size="11"
+				<td><input type="text" name="bCpf" size="11"
 					value="<c:out value='${user.bCpf}' />" /></td>
 			</tr>
 			<tr>
 				<th>RG:</th>
-				<td><input type="text" name="rg" size="20"
+				<td><input type="text" name="cRg" size="20"
 					value="<c:out value='${user.cRg}' />" /></td>
 			</tr>
 			<tr>
 				<th>Student Birthday:</th>
-				<td><input type="text" name="birthday" size="10"
+				<td><input type="text" name="dBirthday" size="10"
 					value="<c:out value='${user.dBirthday}' />" /></td>
 			</tr>
 			<tr>
 				<th>Student Register Date:</th>
-				<td><input type="text" name="registrionDate" size="10"
+				<td><input type="text" name="eRegistrionDate" size="10"
 					value="<c:out value='${user.eRegistrionDate}' />" /></td>
 			</tr>
 			<tr>
 				<th>Mother Name:</th>
-				<td><input type="text" name="motherName" size="100"
+				<td><input type="text" name="fMotherName" size="100"
 					value="<c:out value='${user.fMotherName}' />" /></td>
 			</tr>
 			<tr>
 				<th>Father Name:</th>
-				<td><input type="text" name="fatherName" size="100"
+				<td><input type="text" name="gFatherName" size="100"
 					value="<c:out value='${user.gFatherName}' />" /></td>
 			</tr>
 			<tr>
 				<th>Parents Phone:</th>
-				<td><input type="text" name="parentPhone" size="100"
+				<td><input type="text" name="hParentPhone" size="100"
 					value="<c:out value='${user.hParentPhone}' />" /></td>
 			</tr>
 			<tr>
 				<th>Parents E-mail:</th>
-				<td><input type="text" name="parentEmail" size="100"
+				<td><input type="text" name="iParentEmail" size="100"
 					value="<c:out value='${user.iParentEmail}' />" /></td>
 			</tr>
 			<tr>

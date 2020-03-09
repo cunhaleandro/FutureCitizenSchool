@@ -15,34 +15,34 @@ public class User {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id")
-	protected int id;
+	public int id;
 
 	@Column(name = "aName")
-	protected String aName;
+	public String aName;
 
 	@Column(name = "bCpf")
-	protected String bCpf;
+	public String bCpf;
 
 	@Column(name = "cRg")
-	protected String cRg;
+	public String cRg;
 
 	@Column(name = "dBirthday")
-	protected String dBirthday;
+	public String dBirthday;
 
 	@Column(name = "eRegistrionDate")
-	protected String eRegistrionDate;
+	public String eRegistrionDate;
 
 	@Column(name = "fMotherName")
-	protected String fMotherName;
+	public String fMotherName;
 
 	@Column(name = "gFatherName")
-	protected String gFatherName;
+	public String gFatherName;
 
 	@Column(name = "hParentPhone")
-	protected String hParentPhone;
+	public String hParentPhone;
 
 	@Column(name = "iParentEmail")
-	protected String iParentEmail;
+	public String iParentEmail;
 
 	public User() {
 
