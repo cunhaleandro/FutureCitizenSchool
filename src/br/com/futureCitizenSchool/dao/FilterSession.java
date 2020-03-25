@@ -39,11 +39,11 @@ public class FilterSession {
 				chain.doFilter(request, response);
 			} else {
 				HttpServletResponse httpResponse = (HttpServletResponse) response;
-				httpResponse.sendRedirect(httpRequest.getContextPath() + "/erro/sessaoexpirada.jsp");
+				httpResponse.sendRedirect(httpRequest.getContextPath() + "./WEB-INF/sessaoexpirada.jsp");
 			}
 		} catch (Exception e) {
 			HttpServletResponse httpResponse = (HttpServletResponse) response;
-			httpResponse.sendRedirect(httpRequest.getContextPath() + "/erro/erro.jsp");
+			httpResponse.sendRedirect(httpRequest.getContextPath() + "./WEB-INF/error.jsp");
 		}
 	}
 

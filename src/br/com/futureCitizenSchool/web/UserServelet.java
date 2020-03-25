@@ -19,6 +19,7 @@ public class UserServelet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private UserDao userDao;
 
+	//inicia a sessão do usuário
 	public void init() {
 		userDao = new UserDao();
 	}
@@ -27,11 +28,11 @@ public class UserServelet extends HttpServlet {
 			throws ServletException, IOException {
 		doGet(request, response);
 	}
-
+	//Faz as ações no form.
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		String action = request.getServletPath();
-
+		//todos referenciados aos métodos abaixo 
 		try {
 			switch (action) {
 			case "/new":
@@ -60,7 +61,7 @@ public class UserServelet extends HttpServlet {
 			throw new ServletException(ex);
 		}
 	}
-
+	//todos referenciados aos métodos da classe UserDAO 
 	private void listUser(HttpServletRequest request, HttpServletResponse response)
 			throws SQLException, IOException, ServletException {
 		List<User> listUser = UserDao.getAllUser();
